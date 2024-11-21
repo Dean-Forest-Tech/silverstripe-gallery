@@ -1,6 +1,6 @@
 <?php
 
-use ilateral\SilverStripe\Gallery\ShortCodes\GalleryShortCodeHandler;
+use DFT\SilverStripe\Gallery\ShortCodes\GalleryShortCodeHandler;
 use SilverStripe\View\Parsers\ShortcodeParser;
 
 ShortcodeParser::get('default')->register(

@@ -1,5 +1,5 @@
 {
-  "name": "i-lateral/silverstripe-gallery",
+  "name": "dft/silverstripe-gallery",
   "description": "A Silverstripe image gallery allowing multi image upload and automatic generation of thumbnail gallery with popups",
     "type": "silverstripe-vendormodule",
     "homepage": "http://github.com/Dean-Forest-Tech/silverstripe-gallery",
@@ -34,7 +34,7 @@
     },
     "autoload": {
         "psr-4": {
-            "ilateral\\SilverStripe\\Gallery\\": "src/"
+            "DFT\\SilverStripe\\Gallery\\": "src/"
         }
     }
 }
