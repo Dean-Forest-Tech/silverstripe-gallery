@@ -1,8 +1,8 @@
 <?php
 
-namespace ilateral\SilverStripe\Gallery\Helpers;
+namespace DFT\SilverStripe\Gallery\Helpers;
 
-use ilateral\SilverStripe\Gallery\Model\Gallery;
+use DFT\SilverStripe\Gallery\Model\Gallery;
 use LogicException;
 use SilverStripe\Assets\Image;
 use SilverStripe\Assets\Storage\DBFile;

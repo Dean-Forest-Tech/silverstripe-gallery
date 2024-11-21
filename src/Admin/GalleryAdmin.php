@@ -1,8 +1,8 @@
 <?php
 
-namespace ilateral\SilverStripe\Gallery\Admin;
+namespace DFT\SilverStripe\Gallery\Admin;
 
-use ilateral\SilverStripe\Gallery\Model\Gallery;
+use DFT\SilverStripe\Gallery\Model\Gallery;
 use ilateral\SilverStripe\ModelAdminPlus\ModelAdminPlus;
 
 class GalleryAdmin extends ModelAdminPlus

@@ -1,6 +1,6 @@
 <?php
 
-namespace ilateral\SilverStripe\Gallery\Model;
+namespace DFT\SilverStripe\Gallery\Model;
 
 use SilverStripe\Dev\Deprecation;
 use SilverStripe\Core\Config\Config;
@@ -9,8 +9,8 @@ use SilverStripe\Forms\DropdownField;
 use SilverShop\HasOneField\HasOneButtonField;
 use Bummzack\SortableFile\Forms\SortableUploadField;
 use SilverShop\HasOneField\GridFieldHasOneUnlinkButton;
-use ilateral\SilverStripe\Gallery\Helpers\GalleryHelper;
-use ilateral\SilverStripe\Gallery\Control\GalleryPageController;
+use DFT\SilverStripe\Gallery\Helpers\GalleryHelper;
+use DFT\SilverStripe\Gallery\Control\GalleryPageController;
 
 /**
  * A single page that can display many images as thumbnails.

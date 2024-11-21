@@ -1,10 +1,10 @@
 <?php
 
-namespace ilateral\SilverStripe\Gallery\ShortCodes;
+namespace DFT\SilverStripe\Gallery\ShortCodes;
 
 use SilverStripe\View\Parsers\ShortcodeParser;
 use SilverStripe\View\Parsers\ShortcodeHandler;
-use ilateral\SilverStripe\Gallery\Model\Gallery;
+use DFT\SilverStripe\Gallery\Model\Gallery;
 
 /**
  * Allow embeding shortcodes in a content area.

@@ -1,12 +1,12 @@
 <?php
 
-namespace ilateral\SilverStripe\Gallery\Model;
+namespace DFT\SilverStripe\Gallery\Model;
 
 use SilverStripe\Assets\Image;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\Versioned\Versioned;
-use ilateral\SilverStripe\Gallery\Helpers\GalleryHelper;
+use DFT\SilverStripe\Gallery\Helpers\GalleryHelper;
 
 /**
  * @property int SortOrder

@@ -1,6 +1,6 @@
 <?php
 
-namespace ilateral\SilverStripe\Gallery\Control;
+namespace DFT\SilverStripe\Gallery\Control;
 
 use SilverStripe\Dev\Deprecation;
 use SilverStripe\ORM\FieldType\DBField;

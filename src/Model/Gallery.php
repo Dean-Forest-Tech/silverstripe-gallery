@@ -1,6 +1,6 @@
 <?php
 
-namespace ilateral\SilverStripe\Gallery\Model;
+namespace DFT\SilverStripe\Gallery\Model;
 
 use SilverStripe\Core\Convert;
 use SilverStripe\ORM\DataObject;
@@ -13,8 +13,8 @@ use SilverStripe\Core\Injector\Injector;
 use SilverStripe\ORM\ManyManyThroughList;
 use SilverStripe\Forms\GridField\GridField;
 use Bummzack\SortableFile\Forms\SortableUploadField;
-use ilateral\SilverStripe\Gallery\Model\GalleryImage;
-use ilateral\SilverStripe\Gallery\ShortCodes\GalleryShortCodeHandler;
+use DFT\SilverStripe\Gallery\Model\GalleryImage;
+use DFT\SilverStripe\Gallery\ShortCodes\GalleryShortCodeHandler;
 use SilverStripe\Forms\ReadonlyField;
 
 /**

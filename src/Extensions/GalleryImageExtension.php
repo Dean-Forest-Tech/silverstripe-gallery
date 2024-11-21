@@ -2,7 +2,7 @@
 
 namespace DFT\SilverStripe\Gallery\Extensions;
 
-use ilateral\SilverStripe\Gallery\Model\Gallery;
+use DFT\SilverStripe\Gallery\Model\Gallery;
 use SilverStripe\ORM\DataExtension;
 use DFT\SilverStripe\Gallery\Model\Gallery;
 

@@ -1,14 +1,14 @@
 <?php
 
-namespace ilateral\SilverStripe\Gallery\Model;
+namespace DFT\SilverStripe\Gallery\Model;
 
 use Page;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\NumericField;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\DropdownField;
-use ilateral\SilverStripe\Gallery\Control\GalleryHubController;
-use ilateral\SilverStripe\Gallery\Helpers\GalleryHelper;
+use DFT\SilverStripe\Gallery\Control\GalleryHubController;
+use DFT\SilverStripe\Gallery\Helpers\GalleryHelper;
 use SilverStripe\Core\Config\Config;
 use SilverStripe\ORM\ArrayList;
 
