@@ -2,5 +2,7 @@ SilverStripe\ORM\DatabaseAdmin:
   classname_value_remapping:
     GalleryPage: DFT\SilverStripe\Gallery\Model\GalleryPage
     GalleryHub: DFT\SilverStripe\Gallery\Model\GalleryHub
-    ilateral\SilverStripe\Gallery\Model\GalleryPage: DFT\SilverStripe\Gallery\Model\GalleryPage
+    ilateral\SilverStripe\Gallery\Model\Gallery: DFT\SilverStripe\Gallery\Model\Gallery
     ilateral\SilverStripe\Gallery\Model\GalleryHub: DFT\SilverStripe\Gallery\Model\GalleryHub
+    ilateral\SilverStripe\Gallery\Model\GalleryImage: DFT\SilverStripe\Gallery\Model\GalleryImage
+    ilateral\SilverStripe\Gallery\Model\GalleryPage: DFT\SilverStripe\Gallery\Model\GalleryPage
