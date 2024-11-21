@@ -1,6 +1,6 @@
 <?php
 
-namespace ilateral\SilverStripe\Gallery\Control;
+namespace DFT\SilverStripe\Gallery\Control;
 
 use SilverStripe\Assets\Image;
 use SilverStripe\Dev\Deprecation;
@@ -99,7 +99,7 @@ class GalleryPageController extends GalleryHubController
             return $this->renderWith(
                 [
                     'Gallery',
-                    'ilateral\SilverStripe\Gallery\Includes\Gallery'
+                    'DFT\SilverStripe\Gallery\Includes\Gallery'
                 ],
                 $vars
             );

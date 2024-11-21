@@ -1,9 +1,9 @@
 <?php
 
-namespace ilateral\SilverStripe\Gallery\Extensions;
+namespace DFT\SilverStripe\Gallery\Extensions;
 
 use SilverStripe\ORM\DataExtension;
-use ilateral\SilverStripe\Gallery\Model\GalleryPage;
+use DFT\SilverStripe\Gallery\Model\GalleryPage;
 
 class GalleryImage extends DataExtension
 {

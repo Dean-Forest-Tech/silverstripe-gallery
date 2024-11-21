@@ -1,13 +1,13 @@
 <?php
 
-namespace ilateral\SilverStripe\Gallery\Model;
+namespace DFT\SilverStripe\Gallery\Model;
 
 use Page;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\NumericField;
 use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\DropdownField;
-use ilateral\SilverStripe\Gallery\Control\GalleryHubController;
+use DFT\SilverStripe\Gallery\Control\GalleryHubController;
 
 /**
  * Generate a page that can display it's children as a grid of thumbnails
@@ -46,7 +46,7 @@ class GalleryHub extends Page
      */
     private static $description = 'Display child galleries as a thumbnail grid';
 
-    private static $icon = "resources/i-lateral/silverstripe-gallery/client/dist/images/gallery-hub.png";
+    private static $icon = "resources/dft/silverstripe-gallery/client/dist/images/gallery-hub.png";
 
     private static $table_name = "GalleryHub";
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace ilateral\SilverStripe\Gallery\Model;
+namespace DFT\SilverStripe\Gallery\Model;
 
 use Page;
 use SilverStripe\Assets\Image;
@@ -11,7 +11,7 @@ use SilverStripe\Forms\CheckboxField;
 use SilverStripe\Forms\DropdownField;
 use SilverStripe\ORM\FieldType\DBHTMLText;
 use Bummzack\SortableFile\Forms\SortableUploadField;
-use ilateral\SilverStripe\Gallery\Control\GalleryPageController;
+use DFT\SilverStripe\Gallery\Control\GalleryPageController;
 
 /**
  * A single page that can display many images as thumbnails.
@@ -50,7 +50,7 @@ class GalleryPage extends GalleryHub
      */
     private static $description = 'Display a "gallery" of images';
 
-    private static $icon = "resources/i-lateral/silverstripe-gallery/client/dist/images/gallery.png";
+    private static $icon = "resources/dft/silverstripe-gallery/client/dist/images/gallery.png";
 
     private static $table_name = "GalleryPage";
 
