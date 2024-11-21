@@ -6,7 +6,9 @@ use PageController;
 use SilverStripe\Assets\Image;
 use SilverStripe\ORM\ArrayList;
 use SilverStripe\View\ArrayData;
+use SilverStripe\Dev\Deprecation;
 use SilverStripe\ORM\PaginatedList;
+use ilateral\SilverStripe\Gallery\Helpers\GalleryHelper;
 
 class GalleryHubController extends PageController
 {
@@ -25,11 +27,13 @@ class GalleryHubController extends PageController
             $image = $child->SortedImages()->first();
             $child_data = $child->toMap();
             $child_data["Link"] = $child->Link();
-            if ($image) {
-                $child_data["GalleryThumbnail"] = $this->ScaledImage($image, true);
-            } else {
+
+            if (empty($image)) {
                 $child_data["GalleryThumbnail"] = null;
+            } else {
+                $child_data["GalleryThumbnail"] = $this->generateGalleryThumbnail($image, true);
             }
+
             $list->add(ArrayData::create($child_data));
         }
 
@@ -39,28 +43,39 @@ class GalleryHubController extends PageController
         return $pages;
     }
 
+    protected function generateGalleryThumbnail(Image $image)
+    {
+        $width = $this->getThumbWidth();
+        $height = $this->getThumbHeight();
+        $adjust_method = $this->getThumbResize();
+        $background = $this->getPadBackground();
+
+        $helper = GalleryHelper::create($image)
+            ->setWidth($width)
+            ->setHeight($height)
+            ->setAdjustMethod($adjust_method)
+            ->setBackground($background);
+
+        return $helper->adjustImage();
+    }
+
     /**
      * Generate an image based on the provided type
      * (either )
-     *
-     * @param Image $image
-     * @param string $thumbnail generate a smaller image (based on thumbnail settings)
-     * @return void
      */
     protected function ScaledImage(Image $image, $thumbnail = false)
     {
+        Deprecation::notice('3.0');
+
+        if ($thumbnail == true) {
+            return $this->generateGalleryThumbnail($image);
+        }
+
         $img = false;
         $background = $this->PaddedImageBackground;
-        
-        if ($thumbnail == true) {
-            $resize_type = $this->getThumbResize();
-            $width = $this->getThumbWidth();
-            $height = $this->getThumbHeight();
-        } else {
-            $resize_type = $this->getFullResize();
-            $width = $this->getFullWidth();
-            $height = $this->getFullHeight();
-        }
+        $resize_type = $this->getFullResize();
+        $width = $this->getFullWidth();
+        $height = $this->getFullHeight();
 
         switch ($resize_type) {
             case 'crop':

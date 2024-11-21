@@ -111,3 +111,6 @@ Switch to stable dependencies
 * Migrate to DFT
 * SS5 support
 * Decouple `Gallery` from `GalleryPage`
+* Allow tracking of galleries as seperate objects
+* Allow embeding of gallery objects in content areas
+* Migrate most gallery settings to the SS `Config` setup.
