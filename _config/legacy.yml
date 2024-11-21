@@ -1,4 +1,6 @@
 SilverStripe\ORM\DatabaseAdmin:
   classname_value_remapping:
-    GalleryPage: ilateral\SilverStripe\Gallery\Model\GalleryPage
-    GalleryHub: ilateral\SilverStripe\Gallery\Model\GalleryHub
+    GalleryPage: DFT\SilverStripe\Gallery\Model\GalleryPage
+    GalleryHub: DFT\SilverStripe\Gallery\Model\GalleryHub
+    ilateral\SilverStripe\Gallery\Model\GalleryPage: DFT\SilverStripe\Gallery\Model\GalleryPage
+    ilateral\SilverStripe\Gallery\Model\GalleryHub: DFT\SilverStripe\Gallery\Model\GalleryHub

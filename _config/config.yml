@@ -3,4 +3,4 @@ Name: galleryconfig
 ---
 SilverStripe\Assets\Image:
   extensions:
-    - ilateral\SilverStripe\Gallery\Extensions\GalleryImage
+    - DFT\SilverStripe\Gallery\Extensions\GalleryImage
