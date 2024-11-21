@@ -8,13 +8,13 @@ Adds image galleries to your SilverStripe website.
 
 ## Author
 
-This module was created by [i-lateral](http://www.i-lateral.com).
+This module was created by [Dean Forest Tech](https://dean-forest-tech.uk).
 
 ## Installation
 
 The prefered method is via composer:
 
-    composer require i-lateral/silverstripe-gallery
+    composer require dft/silverstripe-gallery
 
 Alternativley download and add to:
 
@@ -68,11 +68,11 @@ If you want all galleries to be restriced to set sizes, you can set some config 
 Setting these configs will remove the relevent fields from the CMS.
 
 ```
-ilateral\SilverStripe\Gallery\Model\GalleryHub:
+DFT\SilverStripe\Gallery\Model\GalleryHub:
   force_thumbnail_width: 350
   force_thumbnail_height: 350
   force_thumbnail_resize_type: crop
-ilateral\SilverStripe\Gallery\Model\GalleryPage:
+DFT\SilverStripe\Gallery\Model\GalleryPage:
   force_image_width: 1200
   force_image_height: 600
   force_image_resize_type: ratio

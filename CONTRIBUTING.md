@@ -6,8 +6,8 @@ welcome any feedback that a user may have.
 If you encounter any issues, have any ideas or want to request a feature,
 please use the following links:
 
- * [Sharing your opinion and raising issues](https://github.com/i-lateral/silverstripe-gallery/issues)
- * [Submit a pull request](https://github.com/i-lateral/silverstripe-gallery/pulls)
+ * [Sharing your opinion and raising issues](https://github.com/Dean-Forest-Tech/silverstripe-gallery/issues)
+ * [Submit a pull request](https://github.com/Dean-Forest-Tech/silverstripe-gallery/pulls)
 
 ## Translations
 
