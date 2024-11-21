@@ -2,7 +2,7 @@
   "name": "i-lateral/silverstripe-gallery",
   "description": "A Silverstripe image gallery allowing multi image upload and automatic generation of thumbnail gallery with popups",
     "type": "silverstripe-vendormodule",
-    "homepage": "http://github.com/i-lateral/silverstripe-gallery",
+    "homepage": "http://github.com/Dean-Forest-Tech/silverstripe-gallery",
     "keywords": [
         "silverstripe",
         "gallery",
@@ -13,16 +13,16 @@
     "license": "BSD-3-Clause",
     "authors": [
         {
-            "name": "Morven Lewis-Everley",
-            "email": "morven@ilateral.co.uk"
+            "name": "Dean Forest Tech",
+            "homepage": "https://dean-forest-tech.uk"
         }
     ],
     "support": {
-        "issues": "http://github.com/i-lateral/silverstripe-gallery/issues"
+        "issues": "http://github.com/Dean-Forest-Tech/silverstripe-gallery/issues"
     },
     "require": {
-        "silverstripe/cms": "^4.1",
-        "bummzack/sortablefile": "^2.0"
+        "silverstripe/cms": "^4 || ^5",
+        "bummzack/sortablefile": "^2"
     },
     "extra": {
         "expose": [
