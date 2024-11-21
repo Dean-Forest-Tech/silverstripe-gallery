@@ -24,6 +24,6 @@
     </div>
 
     <% with $PaginatedImages %>
-        <% include ilateral\SilverStripe\Gallery\Includes\Pagination %>
+        <% include DFT\SilverStripe\Gallery\Includes\Pagination %>
     <% end_with %>
 <% end_if %>
