@@ -8,7 +8,7 @@ use SilverStripe\ORM\ArrayList;
 use SilverStripe\View\ArrayData;
 use SilverStripe\Dev\Deprecation;
 use SilverStripe\ORM\PaginatedList;
-use ilateral\SilverStripe\Gallery\Helpers\GalleryHelper;
+use DFT\SilverStripe\Gallery\Helpers\GalleryHelper;
 
 class GalleryHubController extends PageController
 {

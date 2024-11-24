@@ -2,7 +2,6 @@
 
 namespace DFT\SilverStripe\Gallery\Helpers;
 
-use DFT\SilverStripe\Gallery\Model\Gallery;
 use LogicException;
 use SilverStripe\Assets\Image;
 use SilverStripe\Assets\Storage\DBFile;

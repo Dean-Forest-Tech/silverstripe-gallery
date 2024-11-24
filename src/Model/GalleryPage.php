@@ -7,7 +7,6 @@ use SilverStripe\Core\Config\Config;
 use SilverStripe\Forms\NumericField;
 use SilverStripe\Forms\DropdownField;
 use SilverShop\HasOneField\HasOneButtonField;
-use Bummzack\SortableFile\Forms\SortableUploadField;
 use SilverShop\HasOneField\GridFieldHasOneUnlinkButton;
 use DFT\SilverStripe\Gallery\Helpers\GalleryHelper;
 use DFT\SilverStripe\Gallery\Control\GalleryPageController;
@@ -63,7 +62,7 @@ class GalleryPage extends GalleryHub
      */
     public function isGalleryEmbeded(): bool
     {
-        return stristr($this->Content, '$Gallery');
+        return stristr((string)$this->Content, '$Gallery');
     }
 
     public function Images()

@@ -4,7 +4,6 @@ namespace DFT\SilverStripe\Gallery\Extensions;
 
 use DFT\SilverStripe\Gallery\Model\Gallery;
 use SilverStripe\ORM\DataExtension;
-use DFT\SilverStripe\Gallery\Model\Gallery;
 
 class GalleryImageExtension extends DataExtension
 {
