@@ -7,8 +7,9 @@ use SilverStripe\Core\Config\Config;
 use SilverStripe\Forms\NumericField;
 use SilverStripe\Forms\DropdownField;
 use SilverShop\HasOneField\HasOneButtonField;
-use SilverShop\HasOneField\GridFieldHasOneUnlinkButton;
 use DFT\SilverStripe\Gallery\Helpers\GalleryHelper;
+use Bummzack\SortableFile\Forms\SortableUploadField;
+use SilverShop\HasOneField\GridFieldHasOneUnlinkButton;
 use DFT\SilverStripe\Gallery\Control\GalleryPageController;
 
 /**
@@ -84,8 +85,9 @@ class GalleryPage extends GalleryHub
     public function getCMSFields()
     {
         $self =& $this;
+        $gallery = $this->Gallery();
 
-        $this->beforeUpdateCMSFields(function ($fields) use ($self) {
+        $this->beforeUpdateCMSFields(function ($fields) use ($self, $gallery) {
             $fields->removeByName([
                 "ImageWidth",
                 "ImageHeight",
@@ -96,17 +98,28 @@ class GalleryPage extends GalleryHub
                 return;
             }
 
-            $gallery = HasOneButtonField::create($this, 'Gallery');
-            $gallery
+            $gallery_field = HasOneButtonField::create($this, 'Gallery');
+            $gallery_field
                 ->getConfig()
                 ->removeComponentsByType(GridFieldHasOneUnlinkButton::class);
 
-            $fields->insertBefore(
-                'Content',
-                $gallery
-            );
-
             $fields->removeByName('HideDescription');
+            $upload_folder = $gallery->getUploadFolderName();
+
+            $images_field = SortableUploadField::create(
+                    'Images',
+                    $this->fieldLabel('Images'),
+                    $gallery->Images()
+            )->setFolderName($upload_folder);
+
+            $fields
+                ->addFieldsToTab(
+                    'Root.Gallery',
+                    [
+                        $gallery_field,
+                        $images_field
+                    ]
+                );
         });
 
         return parent::getCMSFields();
