@@ -114,3 +114,7 @@ Switch to stable dependencies
 * Allow tracking of galleries as seperate objects
 * Allow embeding of gallery objects in content areas
 * Migrate most gallery settings to the SS `Config` setup.
+
+## 3.0.1
+
+* Fix invalid import

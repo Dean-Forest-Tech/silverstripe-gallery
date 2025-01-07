@@ -23,7 +23,7 @@
     "require": {
         "silverstripe/cms": "^4 || ^5",
         "bummzack/sortablefile": "^2",
-        "dft/silverstripe-modeladminplus": "^1.2 || ^2",
+        "dft/silverstripe-modeladminplus": "^2",
         "silvershop/silverstripe-hasonefield": "^3.0 || ^4.0"
     },
     "extra": {

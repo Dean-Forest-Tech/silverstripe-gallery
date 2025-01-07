@@ -3,7 +3,7 @@
 namespace DFT\SilverStripe\Gallery\Admin;
 
 use DFT\SilverStripe\Gallery\Model\Gallery;
-use ilateral\SilverStripe\ModelAdminPlus\ModelAdminPlus;
+use DFT\SilverStripe\ModelAdminPlus\ModelAdminPlus;
 
 class GalleryAdmin extends ModelAdminPlus
 {
