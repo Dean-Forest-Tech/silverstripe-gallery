@@ -118,3 +118,7 @@ Switch to stable dependencies
 ## 3.0.1
 
 * Fix invalid import
+
+## 3.0.2
+
+* Fix error with image `belongs_many_many`

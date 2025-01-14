@@ -8,6 +8,6 @@ use SilverStripe\ORM\DataExtension;
 class GalleryImageExtension extends DataExtension
 {
     private static $belongs_many_many = [
-        'Galleries' => Gallery::class . 'Images'
+        'Galleries' => Gallery::class . '.Images'
     ];
 }
