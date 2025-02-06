@@ -200,7 +200,10 @@ class GalleryPage extends GalleryHub
         $this->ImageWidth = ($this->getFullWidth()) ? $this->getFullWidth() : $defaults["ImageWidth"];
         $this->ImageHeight = ($this->getFullHeight()) ? $this->getFullHeight() : $defaults["ImageHeight"];
     
-        if (!$this->Gallery()->exists()) {
+        // for some reason in SS5 exists flags as false
+        // when publishing, so use something a bit more
+        // basic
+        if ($this->GalleryID == 0) {
             $gallery = Gallery::create([
                 'Name' => $this->Title
             ]);
