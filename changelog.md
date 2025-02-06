@@ -122,3 +122,7 @@ Switch to stable dependencies
 ## 3.0.2
 
 * Fix error with image `belongs_many_many`
+
+## 3.0.3
+
+* Fix error when publishing gallery page unlinking gallery
