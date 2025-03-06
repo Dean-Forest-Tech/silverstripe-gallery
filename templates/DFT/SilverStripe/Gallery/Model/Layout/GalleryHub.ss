@@ -16,7 +16,7 @@
 			<div class="gallery-thumbnails">
 				<div class="row line">
 					<% loop $PaginatedGalleries %>
-						<% include ilateral\SilverStripe\Gallery\Includes\GalleryImage Thumbnail=$GalleryThumbnail,ShowTitles=$Top.ShowImageTitles %>
+						<% include DFT\SilverStripe\Gallery\Includes\GalleryImage Thumbnail=$GalleryThumbnail,ShowTitles=$Top.ShowImageTitles %>
 					<% end_loop %>
 				</div>
 			</div>
