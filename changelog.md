@@ -126,3 +126,7 @@ Switch to stable dependencies
 ## 3.0.3
 
 * Fix error when publishing gallery page unlinking gallery
+
+## 3.0.4
+
+* Fix include path error
