@@ -130,3 +130,7 @@ Switch to stable dependencies
 ## 3.0.4
 
 * Fix include path error
+
+## 3.0.5
+
+* Fix gallery duplication bug when gallery is published

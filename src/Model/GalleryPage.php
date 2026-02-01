@@ -11,6 +11,7 @@ use DFT\SilverStripe\Gallery\Helpers\GalleryHelper;
 use Bummzack\SortableFile\Forms\SortableUploadField;
 use SilverShop\HasOneField\GridFieldHasOneUnlinkButton;
 use DFT\SilverStripe\Gallery\Control\GalleryPageController;
+use SilverStripe\Versioned\Versioned;
 
 /**
  * A single page that can display many images as thumbnails.
@@ -199,19 +200,36 @@ class GalleryPage extends GalleryHub
         $defaults = $this->config()->defaults;
         $this->ImageWidth = ($this->getFullWidth()) ? $this->getFullWidth() : $defaults["ImageWidth"];
         $this->ImageHeight = ($this->getFullHeight()) ? $this->getFullHeight() : $defaults["ImageHeight"];
-    
-        // for some reason in SS5 exists flags as false
-        // when publishing, so use something a bit more
-        // basic
-        if ($this->GalleryID == 0) {
+
+        // Ensure a new gallery is setup on creation
+        if (!$this->isInDB()) {
             $gallery = Gallery::create([
-                'Name' => $this->Title
+                'Name' => $this->Title 
             ]);
             $gallery->write();
             $this->GalleryID = $gallery->ID;
-        } else {
-            $this->Gallery()->Name = $this->Title;
-            $this->Gallery()->write();
+        }
+    }
+
+    public function onAfterWrite()
+    {
+        parent::onAfterWrite();
+
+        // For some reason there are issues when
+        // publishing a gallery that causes
+        // duplication. So ensure we are correctly
+        // updating the original gallery
+        $draft = Versioned::get_by_stage(
+            static::class,
+            Versioned::DRAFT
+        )->byID($this->ID);
+
+        $gallery = Gallery::get()
+            ->byID($draft->GalleryID);
+
+        if (!empty($gallery)) {
+            $gallery->Name = $this->Title;
+            $gallery->write();
         }
     }
 }
